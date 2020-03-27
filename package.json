@@ -1,5 +1,5 @@
 {
-  "name": "pm2-logrotate",
+  "name": "logrotate",
   "version": "2.7.0",
   "description": "Module to rotate logs of every pm2 application",
   "main": "app.js",
