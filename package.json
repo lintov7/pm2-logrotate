@@ -16,7 +16,7 @@
   "author": "Joni SHKURTI",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pm2-hive/pm2-logrotate.git"
+    "url": "git+https://github.com/lintov7/pm2-logrotate.git"
   },
   "bugs": {
     "url": "https://github.com/pm2-hive/pm2-logrotate/issues"
@@ -25,7 +25,7 @@
   "license": "MIT",
   "apps": [
     {
-      "name": "pm2-logrotate",
+      "name": "logrotate",
       "script": "app.js",
       "max_memory_restart" : "500M"
     }
@@ -34,9 +34,9 @@
     "max_size": "10M",
     "retain": "30",
     "compress": false,
-    "dateFormat": "YYYY-MM-DD_HH-mm-ss",
+    "dateFormat": "YYYY-MM-DD-HH-mm-ss",
     "workerInterval": "30",
-    "rotateInterval": "0 0 * * *",
+    "rotateInterval": "*/1 * * * *",
     "rotateModule": true
   }
 }
