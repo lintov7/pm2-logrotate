@@ -38,7 +38,7 @@ else if (process.env.HOME || process.env.HOMEPATH)
 var WORKER_INTERVAL = isNaN(parseInt(conf.workerInterval)) ? 30 * 1000 : 
                             parseInt(conf.workerInterval) * 1000; // default: 30 secs
 var SIZE_LIMIT = get_limit_size(); // default : 10MB
-var ROTATE_CRON = conf.rotateInterval || "*/1 0 * * *"; // default : every day at midnight
+var ROTATE_CRON = conf.rotateInterval || "*/1 * * * *"; // default : every day at midnight
 var RETAIN = isNaN(parseInt(conf.retain)) ? undefined : parseInt(conf.retain); // All
 var COMPRESSION = JSON.parse(conf.compress) || false; // Do not compress by default
 var DATE_FORMAT = conf.dateFormat || 'YYYY-MM-DD-HH-mm-ss';
