@@ -64,7 +64,7 @@ function delete_old(file) {
   if (file === "/dev/null") return;
   var fileBaseName = file.substr(0, file.length - 4).split('/').pop() + "__";
   var dirName = path.dirname(file);
-
+  console.log(dirName);
   fs.readdir(dirName, function(err, files) {
     var i, len;
     if (err) return pmx.notify(err);
@@ -104,6 +104,7 @@ function proceed(file) {
       // use default
     }
   }
+	console.log(file.substr(0, file.length - 4) + '__' + final_time + '.log');
   var final_name = 'log_' + final_time + '.log';
   // if compression is enabled, add gz extention and create a gzip instance
   if (COMPRESSION) {
