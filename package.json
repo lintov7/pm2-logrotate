@@ -1,5 +1,5 @@
 {
-  "name": "logrotate",
+  "name": "pm2-logrotate",
   "version": "2.7.0",
   "description": "Module to rotate logs of every pm2 application",
   "main": "app.js",
@@ -25,7 +25,7 @@
   "license": "MIT",
   "apps": [
     {
-      "name": "logrotate",
+      "name": "pm2-logrotate",
       "script": "app.js",
       "max_memory_restart" : "500M"
     }
